@@ -78,9 +78,9 @@ public class empresasJava {
 
         
         // matrices de probabilidad
-        double[][] matrizProbabilidadSube = new double[3][6];
-        double[][] matrizProbabilidadSeMantiene = new double[3][6];
-        double[][] matrizProbabilidadBaja = new double[3][6];
+        double[][] matrizProbabilidadSube = new double[3][5];
+        double[][] matrizProbabilidadSeMantiene = new double[3][5];
+        double[][] matrizProbabilidadBaja = new double[3][5];
 
 
         // Satisfaccion Cliente - Sube
@@ -222,76 +222,76 @@ public class empresasJava {
                 contadorPrecioBajaSube++;
             }
 
-            /*
+            
 
-            // -----Empresa 2(matrizValores[i][0]==2)-----
+            // -----Se Mantiene(matrizValores[i][0]==2)-----
 
             // Satisfaccion - Alta
-            if (matrizValores[i][1] == (1) && matrizValores[i][0] == (2)) {
-                contadorSatisfaccionAltaEmpresa2++;
+            if (matrizValores[i][1] == (1) && matrizValores[i][6] == (2)) {
+                contadorSatisfaccionAltaSeMantiene++;
             }
 
             // Satisfaccion - Media
-            if (matrizValores[i][1] == (2) && matrizValores[i][0] == (2)) {
-                contadorSatisfaccionMediaEmpresa2++;
+            if (matrizValores[i][1] == (2) && matrizValores[i][6] == (2)) {
+                contadorSatisfaccionMediaSeMantiene++;
             }
 
             // Satisfaccion - Baja
-            if (matrizValores[i][1] == (3) && matrizValores[i][0] == (2)) {
-                contadorSatisfaccionBajaEmpresa2++;
+            if (matrizValores[i][1] == (3) && matrizValores[i][6] == (2)) {
+                contadorSatisfaccionBajaSeMantiene++;
             }
 
             // Calidad - Alta
-            if (matrizValores[i][2] == (1) && matrizValores[i][0] == (2)) {
-                contadorCalidadAltaEmpresa2++;
+            if (matrizValores[i][2] == (1) && matrizValores[i][6] == (2)) {
+                contadorCalidadAltaSeMantiene++;
             }
 
             // Calidad - Media
-            if (matrizValores[i][2] == (2) && matrizValores[i][0] == (2)) {
-                contadorCalidadMediaEmpresa2++;
+            if (matrizValores[i][2] == (2) && matrizValores[i][6] == (2)) {
+                contadorCalidadMediaSeMantiene++;
             }
 
             // Calidad - Baja
-            if (matrizValores[i][2] == (3) && matrizValores[i][0] == (2)) {
-                contadorCalidadBajaEmpresa2++;
+            if (matrizValores[i][2] == (3) && matrizValores[i][6] == (2)) {
+                contadorCalidadBajaSeMantiene++;
             }
 
             // Responde - Alta
-            if (matrizValores[i][3] == (1) && matrizValores[i][0] == (2)) {
-                contadorRespondeAltaEmpresa2++;
+            if (matrizValores[i][3] == (1) && matrizValores[i][6] == (2)) {
+                contadorRespondeAltaSeMantiene++;
             }
 
             // Responde - Baja
-            if (matrizValores[i][3] == (2) && matrizValores[i][0] == (2)) {
-                contadorRespondeBajaEmpresa2++;
+            if (matrizValores[i][3] == (2) && matrizValores[i][6] == (2)) {
+                contadorRespondeBajaSeMantiene++;
             }
 
             // Comunicacion - Alta
-            if (matrizValores[i][4] == (1) && matrizValores[i][0] == (2)) {
-                contadorComunicacionAltaEmpresa2++;
+            if (matrizValores[i][4] == (1) && matrizValores[i][6] == (2)) {
+                contadorComunicacionAltaSeMantiene++;
             }
 
             // Comunicacion - Baja
-            if (matrizValores[i][4] == (2) && matrizValores[i][0] == (2)) {
-                contadorComunicacionBajaEmpresa2++;
+            if (matrizValores[i][4] == (2) && matrizValores[i][6] == (2)) {
+                contadorComunicacionBajaSeMantiene++;
             }
 
             // Precio - Alta
-            if (matrizValores[i][5] == (1) && matrizValores[i][0] == (2)) {
-                contadorPrecioAltaEmpresa2++;
+            if (matrizValores[i][5] == (1) && matrizValores[i][6] == (2)) {
+                contadorPrecioAltaSeMantiene++;
             }
 
             // Precio - Media
-            if (matrizValores[i][5] == (2) && matrizValores[i][0] == (2)) {
-                contadorPrecioMediaEmpresa2++;
+            if (matrizValores[i][5] == (2) && matrizValores[i][6] == (2)) {
+                contadorPrecioMediaSeMantiene++;
             }
 
             // Precio - Baja
-            if (matrizValores[i][5] == (3) && matrizValores[i][0] == (2)) {
-                contadorPrecioBajaEmpresa2++;
+            if (matrizValores[i][5] == (3) && matrizValores[i][6] == (2)) {
+                contadorPrecioBajaSeMantiene++;
             }
 
-            
+            /* 
             // -----Empresa 3(matrizValores[i][0]==3)-----
 
             // Satisfaccion - Alta
@@ -388,7 +388,7 @@ public class empresasJava {
 
         // Empresa 1
         System.out.println("------------------------------------------");
-        System.out.println("Tabla de frecuencia de empresa 1:");
+        System.out.println("Tabla de frecuencia de sube:");
         for (i = 0; i < 3; i++) {
             for (j = 0; j < 5; j++) {
                 System.out.printf("%f ", matrizFrecuenciaSube[i][j]);
@@ -396,40 +396,38 @@ public class empresasJava {
             System.out.print("\n");
         }
 
-        /*
+        
 
         // Para empresa 2
-        matrizFrecuenciaEmpresa2[0][0] = contadorSatisfaccionAltaEmpresa2;
-        matrizFrecuenciaEmpresa2[1][0] = contadorSatisfaccionMediaEmpresa2;
-        matrizFrecuenciaEmpresa2[2][0] = contadorSatisfaccionBajaEmpresa2;
+        matrizFrecuenciaSeMantiene[0][0] = contadorSatisfaccionAltaSeMantiene;
+        matrizFrecuenciaSeMantiene[1][0] = contadorSatisfaccionMediaSeMantiene;
+        matrizFrecuenciaSeMantiene[2][0] = contadorSatisfaccionBajaSeMantiene;
 
-        matrizFrecuenciaEmpresa2[0][1] = contadorCalidadAltaEmpresa2;
-        matrizFrecuenciaEmpresa2[1][1] = contadorCalidadMediaEmpresa2;
-        matrizFrecuenciaEmpresa2[2][1] = contadorCalidadBajaEmpresa2;
+        matrizFrecuenciaSeMantiene[0][1] = contadorCalidadAltaSeMantiene;
+        matrizFrecuenciaSeMantiene[1][1] = contadorCalidadMediaSeMantiene;
+        matrizFrecuenciaSeMantiene[2][1] = contadorCalidadBajaSeMantiene;
 
-        matrizFrecuenciaEmpresa2[0][2] = contadorRespondeAltaEmpresa2;
-        matrizFrecuenciaEmpresa2[1][2] = contadorRespondeBajaEmpresa2;
+        matrizFrecuenciaSeMantiene[0][2] = contadorRespondeAltaSeMantiene;
+        matrizFrecuenciaSeMantiene[1][2] = contadorRespondeBajaSeMantiene;
 
-        matrizFrecuenciaEmpresa2[0][3] = contadorComunicacionAltaEmpresa2;
-        matrizFrecuenciaEmpresa2[1][3] = contadorComunicacionBajaEmpresa2;
+        matrizFrecuenciaSeMantiene[0][3] = contadorComunicacionAltaSeMantiene;
+        matrizFrecuenciaSeMantiene[1][3] = contadorComunicacionBajaSeMantiene;
 
-        matrizFrecuenciaEmpresa2[0][4] = contadorPrecioAltaEmpresa2;
-        matrizFrecuenciaEmpresa2[1][4] = contadorPrecioMediaEmpresa2;
-        matrizFrecuenciaEmpresa2[2][4] = contadorPrecioBajaEmpresa2;
+        matrizFrecuenciaSeMantiene[0][4] = contadorPrecioAltaSeMantiene;
+        matrizFrecuenciaSeMantiene[1][4] = contadorPrecioMediaSeMantiene;
+        matrizFrecuenciaSeMantiene[2][4] = contadorPrecioBajaSeMantiene;
 
-        matrizFrecuenciaEmpresa2[0][5] = contadorAccionRankinSubeEmpresa2;
-        matrizFrecuenciaEmpresa2[1][5] = contadorAccionRankingSeMantieneEmpresa2;
-        matrizFrecuenciaEmpresa2[2][5] = contadorAccionRankingBajaEmpresa2;
-
-        // Empresa 2
+        // Se mantiene
         System.out.println("------------------------------------------");
-        System.out.println("Tabla de frecuencia de empresa 2:");
+        System.out.println("Tabla de frecuencia de se mantiene:");
         for (i = 0; i < 3; i++) {
-            for (j = 0; j < 6; j++) {
-                System.out.printf("%f ", matrizFrecuenciaEmpresa2[i][j]);
+            for (j = 0; j < 5; j++) {
+                System.out.printf("%f ", matrizFrecuenciaSeMantiene[i][j]);
             }
             System.out.print("\n");
         }
+
+        /*
 
         // Para empresa 3
         matrizFrecuenciaEmpresa3[0][0] = contadorSatisfaccionAltaEmpresa3;
