@@ -62,14 +62,14 @@ public class empresasJava {
       
         
         // matrices de frecuencia para empresas
-        double[][] matrizFrecuenciaSube = new double[3][6];
-        double[][] matrizFrecuenciaSeMantiene = new double[3][6];
-        double[][] matrizFrecuenciaBaja = new double[3][6];
+        double[][] matrizFrecuenciaSube = new double[3][5];
+        double[][] matrizFrecuenciaSeMantiene = new double[3][5];
+        double[][] matrizFrecuenciaBaja = new double[3][5];
      
       
         // Se llenan ambas matrices con 0 para evitar espacion con valores no definidos
         for (i = 0; i < 3; i++) {
-            for (j = 0; j < 6; j++) {
+            for (j = 0; j < 5; j++) {
                 matrizFrecuenciaSube[i][j] = 0.0;
                 matrizFrecuenciaSeMantiene[i][j] = 0.0;
                 matrizFrecuenciaBaja[i][j] = 0.0;
@@ -362,42 +362,41 @@ public class empresasJava {
             */
         }
 
-        /*
+        
 
         // Se llenan y muestran los datos de las tablas de frecuencia
 
-        // Para empresa 1
-        matrizFrecuenciaEmpresa1[0][0] = contadorSatisfaccionAltaEmpresa1;
-        matrizFrecuenciaEmpresa1[1][0] = contadorSatisfaccionMediaEmpresa1;
-        matrizFrecuenciaEmpresa1[2][0] = contadorSatisfaccionBajaEmpresa1;
+        // Para sube
+        matrizFrecuenciaSube[0][0] = contadorSatisfaccionAltaSube;
+        matrizFrecuenciaSube[1][0] = contadorSatisfaccionMediaSube;
+        matrizFrecuenciaSube[2][0] = contadorSatisfaccionBajaSube;
 
-        matrizFrecuenciaEmpresa1[0][1] = contadorCalidadAltaEmpresa1;
-        matrizFrecuenciaEmpresa1[1][1] = contadorCalidadMediaEmpresa1;
-        matrizFrecuenciaEmpresa1[2][1] = contadorCalidadBajaEmpresa1;
+        matrizFrecuenciaSube[0][1] = contadorCalidadAltaSube;
+        matrizFrecuenciaSube[1][1] = contadorCalidadMediaSube;
+        matrizFrecuenciaSube[2][1] = contadorCalidadBajaSube;
 
-        matrizFrecuenciaEmpresa1[0][2] = contadorRespondeAltaEmpresa1;
-        matrizFrecuenciaEmpresa1[1][2] = contadorRespondeBajaEmpresa1;
+        matrizFrecuenciaSube[0][2] = contadorRespondeAltaSube;
+        matrizFrecuenciaSube[1][2] = contadorRespondeBajaSube;
 
-        matrizFrecuenciaEmpresa1[0][3] = contadorComunicacionAltaEmpresa1;
-        matrizFrecuenciaEmpresa1[1][3] = contadorComunicacionBajaEmpresa1;
+        matrizFrecuenciaSube[0][3] = contadorComunicacionAltaSube;
+        matrizFrecuenciaSube[1][3] = contadorComunicacionBajaSube;
 
-        matrizFrecuenciaEmpresa1[0][4] = contadorPrecioAltaEmpresa1;
-        matrizFrecuenciaEmpresa1[1][4] = contadorPrecioMediaEmpresa1;
-        matrizFrecuenciaEmpresa1[2][4] = contadorPrecioBajaEmpresa1;
+        matrizFrecuenciaSube[0][4] = contadorPrecioAltaSube;
+        matrizFrecuenciaSube[1][4] = contadorPrecioMediaSube;
+        matrizFrecuenciaSube[2][4] = contadorPrecioBajaSube;
 
-        matrizFrecuenciaEmpresa1[0][5] = contadorAccionRankinSubeEmpresa1;
-        matrizFrecuenciaEmpresa1[1][5] = contadorAccionRankingSeMantieneEmpresa1;
-        matrizFrecuenciaEmpresa1[2][5] = contadorAccionRankingBajaEmpresa1;
 
         // Empresa 1
         System.out.println("------------------------------------------");
         System.out.println("Tabla de frecuencia de empresa 1:");
         for (i = 0; i < 3; i++) {
-            for (j = 0; j < 6; j++) {
-                System.out.printf("%f ", matrizFrecuenciaEmpresa1[i][j]);
+            for (j = 0; j < 5; j++) {
+                System.out.printf("%f ", matrizFrecuenciaSube[i][j]);
             }
             System.out.print("\n");
         }
+
+        /*
 
         // Para empresa 2
         matrizFrecuenciaEmpresa2[0][0] = contadorSatisfaccionAltaEmpresa2;
