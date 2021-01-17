@@ -33,7 +33,6 @@ public class empresasJava {
         int paramResponde = 2; // Baja
         int paramComunicacion = 1; // Alta
         int paramPrecio = 2; // Media
-        int paramAccion = 2; // Baja
 
         // Probabilidad de accion en el
         int cantidadSube;
@@ -472,7 +471,6 @@ public class empresasJava {
             }
         }
 
-    
         if (valorCeroBaja) {
             System.out.println("------------------------------------------");
             System.out.println("Matriz normalizada Baja");
@@ -484,10 +482,11 @@ public class empresasJava {
                 System.out.print("\n");
             }
         }
-          
-         
-        /* Se debe obtener la suma de una columna de ambas matrices para obtener la
-         probabilidades respectivas para cada evento*/
+
+        /*
+         * Se debe obtener la suma de una columna de ambas matrices para obtener la
+         * probabilidades respectivas para cada evento
+         */
         double sumColMatrizSube = sumColumnas(matrizFrecuenciaSube);
         double sumColMatrizSeMantiene = sumColumnas(matrizFrecuenciaSeMantiene);
         double sumColMatrizBaja = sumColumnas(matrizFrecuenciaBaja);
@@ -503,7 +502,7 @@ public class empresasJava {
             System.out.print("\n");
         }
         System.out.println("------------------------------------------");
-         
+
         // Matriz de probabilida para Se mantiene
         System.out.println("Matriz de probabilidad para Se mantiene");
         for (i = 0; i < 3; i++) {
@@ -514,7 +513,7 @@ public class empresasJava {
             System.out.print("\n");
         }
         System.out.println("------------------------------------------");
-          
+
         // Matriz de probabilida para Baja
         System.out.println("Matriz de probabilidad para Baja");
         for (i = 0; i < 3; i++) {
@@ -525,47 +524,28 @@ public class empresasJava {
             System.out.print("\n");
         }
         System.out.println("------------------------------------------");
-         
-       
-        /* // Determinar factor para Empresa 1 double factorEmpresa1 =
-         * determinarFactorProbabilidad(paramSatisfaccion, paramCalidad, paramResponde,
-         * paramComunicacion, paramPrecio, paramAccion, matrizProbabilidadEmpresa1,
-         * probabilidadEmpresa1);
-         * 
-         * double factorEmpresa2 = determinarFactorProbabilidad(paramSatisfaccion,
-         * paramCalidad, paramResponde, paramComunicacion, paramPrecio, paramAccion,
-         * matrizProbabilidadEmpresa2, probabilidadEmpresa2);
-         * 
-         * double factorEmpresa3 = determinarFactorProbabilidad(paramSatisfaccion,
-         * paramCalidad, paramResponde, paramComunicacion, paramPrecio, paramAccion,
-         * matrizProbabilidadEmpresa3, probabilidadEmpresa3);
-         * 
-         * double factorEmpresa4 = determinarFactorProbabilidad(paramSatisfaccion,
-         * paramCalidad, paramResponde, paramComunicacion, paramPrecio, paramAccion,
-         * matrizProbabilidadEmpresa4, probabilidadEmpresa4);
-         * 
-         * 
-         * 
-         * double sumaTotalFactores = factorEmpresa1 + factorEmpresa2 + factorEmpresa3 +
-         * factorEmpresa4;
-         * 
-         * double probabilidadFinalEmpresa1 = (factorEmpresa1/sumaTotalFactores)*100;
-         * double probabilidadFinalEmpresa2 = (factorEmpresa2/sumaTotalFactores)*100;
-         * double probabilidadFinalEmpresa3 = (factorEmpresa3/sumaTotalFactores)*100;
-         * double probabilidadFinalEmpresa4 = (factorEmpresa4/sumaTotalFactores)*100;
-         * 
-         * 
-         * System.out.
-         * printf("Probabilidad de que pertenezcan a empresa 1: %f porciento \n",
-         * probabilidadFinalEmpresa1); System.out.
-         * printf("Probabilidad de que pertenezcan a empresa 2: %f porciento \n",
-         * probabilidadFinalEmpresa2); System.out.
-         * printf("Probabilidad de que pertenezcan a empresa 3: %f porciento \n",
-         * probabilidadFinalEmpresa3); System.out.
-         * printf("Probabilidad de que pertenezcan a empresa 4: %f porciento \n",
-         * probabilidadFinalEmpresa4);
-         * 
-         */
+
+        // Determinar factor para Sube
+        double factorSube = determinarFactorProbabilidad(paramSatisfaccion, paramCalidad, paramResponde,
+                paramComunicacion, paramPrecio, matrizProbabilidadSube, probabilidadSube);
+
+        // Determinar factor para se Mantiene
+        double factorSeMantiene = determinarFactorProbabilidad(paramSatisfaccion, paramCalidad, paramResponde,
+                paramComunicacion, paramPrecio, matrizProbabilidadSube, probabilidadSeMantiene);
+
+        // Determinar factor para Baja
+        double factorBaja = determinarFactorProbabilidad(paramSatisfaccion, paramCalidad, paramResponde,
+                paramComunicacion, paramPrecio, matrizProbabilidadSube, probabilidadBaja);
+
+        double sumaTotalFactores = factorSube + factorSeMantiene + factorBaja;
+
+        double probabilidadFinalSube = (factorSube / sumaTotalFactores) * 100;
+        double probabilidadFinalSeMantenga = (factorSeMantiene / sumaTotalFactores) * 100;
+        double probabilidadFinalBaje = (factorBaja / sumaTotalFactores) * 100;
+
+        System.out.printf("Probabilidad de que suba: %f por ciento \n", probabilidadFinalSube);
+        System.out.printf("Probabilidad de que se mantenga: %f por ciento \n", probabilidadFinalSeMantenga);
+        System.out.printf("Probabilidad de que suba: %f por ciento \n", probabilidadFinalBaje);
 
     }
 
@@ -602,7 +582,7 @@ public class empresasJava {
     }
 
     public static double determinarFactorProbabilidad(int paramSatisfaccion, int paramCalidad, int paramResponde,
-            int paramComunicacion, int paramPrecio, int paramAccion, double[][] matrizObjetivo, double probTotal) {
+            int paramComunicacion, int paramPrecio, double[][] matrizObjetivo, double probTotal) {
 
         double totalFactor;
 
@@ -611,10 +591,8 @@ public class empresasJava {
         double probResponde = matrizObjetivo[paramResponde - 1][2];
         double probComunicacion = matrizObjetivo[paramComunicacion - 1][3];
         double probPrecio = matrizObjetivo[paramPrecio - 1][4];
-        double probAccion = matrizObjetivo[paramAccion - 1][5];
 
-        totalFactor = proSatisfaccion * probCalidad * probResponde * probComunicacion * probPrecio * probAccion
-                * probTotal;
+        totalFactor = proSatisfaccion * probCalidad * probResponde * probComunicacion * probPrecio * probTotal;
         return totalFactor;
     }
 
