@@ -431,7 +431,7 @@ public class empresasJava {
 
         // Baja
         System.out.println("------------------------------------------");
-        System.out.println("Tabla de frecuencia de empresa 3:");
+        System.out.println("Tabla de frecuencia de baja:");
         for (i = 0; i < 3; i++) {
             for (j = 0; j < 5; j++) {
                 System.out.printf("%f ", matrizFrecuenciaBaja[i][j]);
@@ -531,13 +531,17 @@ public class empresasJava {
 
         // Determinar factor para se Mantiene
         double factorSeMantiene = determinarFactorProbabilidad(paramSatisfaccion, paramCalidad, paramResponde,
-                paramComunicacion, paramPrecio, matrizProbabilidadSube, probabilidadSeMantiene);
+                paramComunicacion, paramPrecio, matrizProbabilidadSeMantiene, probabilidadSeMantiene);
 
         // Determinar factor para Baja
         double factorBaja = determinarFactorProbabilidad(paramSatisfaccion, paramCalidad, paramResponde,
-                paramComunicacion, paramPrecio, matrizProbabilidadSube, probabilidadBaja);
+                paramComunicacion, paramPrecio, matrizProbabilidadBaja, probabilidadBaja);
 
         double sumaTotalFactores = factorSube + factorSeMantiene + factorBaja;
+
+        /* System.out.println(factorSube);
+        System.out.println(factorSeMantiene);
+        System.out.println(factorBaja); */
 
         double probabilidadFinalSube = (factorSube / sumaTotalFactores) * 100;
         double probabilidadFinalSeMantenga = (factorSeMantiene / sumaTotalFactores) * 100;
