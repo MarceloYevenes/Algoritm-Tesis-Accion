@@ -29,10 +29,10 @@ public class empresasJava {
 
         // Parámetros que debe indicar el usuario que serán los que quiere averiguar
         int paramSatisfaccion = 3; // Alta
-        int paramCalidad = 1; // Alta
+        int paramCalidad = 3; // Alta
         int paramResponde = 2; // Baja
-        int paramComunicacion = 1; // Alta
-        int paramPrecio = 2; // Media
+        int paramComunicacion = 2; // Alta
+        int paramPrecio = 3; // Media
 
         // Probabilidad de accion en el
         int cantidadSube;
@@ -549,7 +549,7 @@ public class empresasJava {
 
         System.out.printf("Probabilidad de que suba: %f por ciento \n", probabilidadFinalSube);
         System.out.printf("Probabilidad de que se mantenga: %f por ciento \n", probabilidadFinalSeMantenga);
-        System.out.printf("Probabilidad de que suba: %f por ciento \n", probabilidadFinalBaje);
+        System.out.printf("Probabilidad de que baja: %f por ciento \n", probabilidadFinalBaje);
 
     }
 
