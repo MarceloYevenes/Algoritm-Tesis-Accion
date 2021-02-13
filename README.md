@@ -1,4 +1,4 @@
-# Ejemplo-Empresa  
+# Ejemplo-Empresa-Acción en el ranking  
 ## Instrucciones   
 1. Para usar el código simplemente ejecutar en la misma carpeta del código <strong>javac golfJava.java</strong> 
 2. Luego ejecutar <strong>java golfJava</strong> 
