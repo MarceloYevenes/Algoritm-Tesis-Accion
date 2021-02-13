@@ -19,4 +19,4 @@ Cada una de estas variables tiene opciones válidas para que el código funcione
 * paramHumedad = Alta, Normal. 
 * paramViento = Si, No.   
 
-Cada combinación producira una probabilidad distinta de sucesos, que determinara si la empresa , si se desea modificar los datos de entrenamiento, simplemente se debe modificar la matriz inicial llamada matrizValores, agregando filas extras o borrando algunas.  
+Cada combinación producira una probabilidad distinta de sucesos, que determinara si la empresa sube, baja o se mantiene en el ranking, si se desea modificar los datos de entrenamiento, simplemente se debe modificar la matriz inicial llamada matrizValores, agregando filas extras o borrando algunas.  
