@@ -28,13 +28,12 @@ public class empresasJava {
                 { 4, 3, 3, 2, 2, 3, 2 }, };
 
         // Parámetros que debe indicar el usuario que serán los que quiere averiguar
-        int paramSatisfaccion = 3; // Alta
-        int paramCalidad = 3; // Alta
-        int paramResponde = 2; // Baja
-        int paramComunicacion = 2; // Alta
-        int paramPrecio = 3; // Media
+        int paramSatisfaccion = 3;
+        int paramCalidad = 3;
+        int paramResponde = 2;
+        int paramComunicacion = 2;
+        int paramPrecio = 3;
 
-        // Probabilidad de accion en el
         int cantidadSube;
         int cantidadSeMantiene;
         int cantidadBaja;
@@ -539,9 +538,10 @@ public class empresasJava {
 
         double sumaTotalFactores = factorSube + factorSeMantiene + factorBaja;
 
-        /* System.out.println(factorSube);
-        System.out.println(factorSeMantiene);
-        System.out.println(factorBaja); */
+        /*
+         * System.out.println(factorSube); System.out.println(factorSeMantiene);
+         * System.out.println(factorBaja);
+         */
 
         double probabilidadFinalSube = (factorSube / sumaTotalFactores) * 100;
         double probabilidadFinalSeMantenga = (factorSeMantiene / sumaTotalFactores) * 100;
