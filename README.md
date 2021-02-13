@@ -1,7 +1,7 @@
 # Ejemplo-Empresa-Acción en el ranking  
 ## Instrucciones   
-1. Para usar el código simplemente ejecutar en la misma carpeta del código <strong>javac golfJava.java</strong> 
-2. Luego ejecutar <strong>java golfJava</strong> 
+1. Para usar el código simplemente ejecutar en la misma carpeta del código <strong>javac empresasJava.java</strong> 
+2. Luego ejecutar <strong>java empresasJava</strong> 
 
 Nota: El código puede ser abierto con algún IDE que soporte el lenguaje, en este caso fue ejecutado con la terminal de Mac 11.2 Big Sur  
 
