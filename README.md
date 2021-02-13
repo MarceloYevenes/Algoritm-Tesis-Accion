@@ -14,9 +14,10 @@ Para buscar la probabilidad de que ocurra otro evento simplemente se deben modif
 * paramPrecio  
 
 Cada una de estas variables tiene opciones válidas para que el código funcione, las opciones disponibles por variable son:  
-* paramCielo = Lluvia, Soleado, Nublado.
-* paramTemp = Calor, Templado, Frío.  
-* paramHumedad = Alta, Normal. 
-* paramViento = Si, No.   
+* paramSatisfaccion = 1(Alta), 2(Media), 3(Baja).
+* paramCalidad = 1(Alta), 2(Media), 3(Baja).  
+* paramResponde =  1(Alta), 2(Baja). 
+* paramComunicacion = 1(Alta), 2(Baja).
+* paramPrecio = 1(Alta), 2(Media), 3(Baja).
 
 Cada combinación producira una probabilidad distinta de sucesos, que determinara si la empresa sube, baja o se mantiene en el ranking, si se desea modificar los datos de entrenamiento, simplemente se debe modificar la matriz inicial llamada matrizValores, agregando filas extras o borrando algunas.  
